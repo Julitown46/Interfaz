@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artículo 2</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Navbar -->
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto flex items-center justify-between p-4">
+            <a href="index.html" class="text-lg font-bold">LOGO</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto p-4 grid grid-cols-1 lg:grid-cols-4 gap-6">
+        <article class="lg:col-span-3 bg-white shadow-md rounded-lg p-4">
+            <h1 class="text-2xl font-bold mb-4">Título del Artículo 1</h1>
+            <p class="mb-4">Contenido principal del artículo. Aquí puedes agregar información detallada del artículo.</p>
+
+            <!-- Comments -->
+            <section class="mt-8">
+                <h2 class="text-lg font-semibold mb-4">Comentarios</h2>
+                <ul class="space-y-4">
+                    <li class="bg-gray-100 p-4 rounded">Comentario 1: Muy interesante.</li>
+                    <li class="bg-gray-100 p-4 rounded">Comentario 2: Gran artículo, gracias por compartir.</li>
+                    <li class="bg-gray-100 p-4 rounded">Comentario 3: Tengo algunas preguntas.</li>
+                </ul>
+            </section>
+        </article>
+
+        <!-- Sidebar -->
+        <aside class="space-y-4">
+            <h2 class="text-lg font-semibold">Otros artículos</h2>
+            <a href="articulo2.html" class="block bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition">
+                <img src="https://via.placeholder.com/300" alt="Artículo 2" class="w-full h-32 object-cover">
+                <div class="p-4">
+                    <h3 class="text-md font-semibold">Artículo 2</h3>
+                </div>
+            </a>
+
+            <a href="articulo3.html" class="block bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition">
+                <img src="https://via.placeholder.com/300" alt="Artículo 3" class="w-full h-32 object-cover">
+                <div class="p-4">
+                    <h3 class="text-md font-semibold">Artículo 3</h3>
+                </div>
+            </a>
+        </aside>
+    </main>
+
+</body>
+</html>

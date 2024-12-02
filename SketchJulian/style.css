@@ -1,0 +1,36 @@
+footer {
+    background: linear-gradient(to right, #A04747, #D8A25E, #EEDF7A);
+    color: black;
+    padding: 20px;
+    text-align: center;
+}
+
+@keyframes moverDeLaDerecha {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes crecer {
+    0% {
+        transform: scale(0.8) translateY(-20px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+}
+
+ul img {
+    animation: moverDeLaDerecha 1.5s ease-out;
+}
+
+h4 {
+    animation: crecer 1.5s ease-in-out;
+}
