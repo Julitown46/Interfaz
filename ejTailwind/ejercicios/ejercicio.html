@@ -7,10 +7,125 @@
     <title>Document</title>
     <link rel="stylesheet" href="./output.css">
 </head>
+<div class="min-h-screen flex items-center justify-center bg-gray-100">
+    <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 w-full max-w-sm">
+        <h1 class="text-2xl font-bold mb-4 text-center">Inicio de Sesión</h1>
+        <div class="mb-4">
+            <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Correo:</label>
+            <input id="email" type="email"
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:ring-2 focus:ring-blue-500">
+        </div>
+        <div class="mb-4">
+            <label for="password" class="block text-gray-700 text-sm font-bold mb-2">Contraseña:</label>
+            <input id="password" type="password"
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:ring-2 focus:ring-blue-500">
+        </div>
+        <div class="flex items-center justify-between">
+            <button type="submit"
+                class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                Entrar
+            </button>
+            <button id="nuevo-usuario" type="button"
+                class="bg-gray-500 hover:bg-gray-400 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                Nuevo Usuario
+            </button>
+        </div>
+        <div class="mt-4 text-center">
+            <a href="#" id="partituras" class="text-blue-500 hover:text-blue-700 text-sm">Partituras</a>
+        </div>
+    </form>
+</div>
 
-<body class="desktop:bg-green-700 laptop:bg-blue-200 tablet:bg-red-200 ">
-    <h1 class="text-3xl font-bold underline">
-        Hello world!
-    </h1>
+<div id="tarjeta-nuevo-usuario" class="hidden bg-white shadow-lg rounded p-6 w-full max-w-lg mx-auto mt-8">
+    <h2 class="text-xl font-bold text-gray-700 mb-4">Registro de Nuevo Usuario</h2>
+    <div class="mb-4">
+        <label for="nombre" class="block text-gray-700 text-sm font-bold mb-2">Nombre Completo:</label>
+        <input id="nombre" type="text"
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500">
+    </div>
+    <div class="mb-4">
+        <label for="correo" class="block text-gray-700 text-sm font-bold mb-2">Correo:</label>
+        <input id="correo" type="email"
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500">
+    </div>
+    <div class="mb-4">
+        <label for="confirmar-correo" class="block text-gray-700 text-sm font-bold mb-2">Confirmar Correo:</label>
+        <input id="confirmar-correo" type="email"
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500">
+    </div>
+    <div class="mb-4">
+        <label for="contraseña" class="block text-gray-700 text-sm font-bold mb-2">Contraseña:</label>
+        <input id="contraseña" type="password"
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500">
+    </div>
+    <div class="mb-4">
+        <label for="instrumento" class="block text-gray-700 text-sm font-bold mb-2">Instrumento Musical:</label>
+        <select id="instrumento"
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <option value="guitarra">Guitarra</option>
+            <option value="piano">Piano</option>
+            <option value="bateria">Batería</option>
+        </select>
+    </div>
+    <div class="mb-4">
+        <label for="fecha-nacimiento" class="block text-gray-700 text-sm font-bold mb-2">Fecha de
+            Nacimiento:</label>
+        <input id="fecha-nacimiento" type="date"
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500">
+    </div>
+    <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2">Sexo:</label>
+        <label class="inline-flex items-center">
+            <input type="radio" name="sexo" value="masculino" class="form-radio text-blue-500">
+            <span class="ml-2">Masculino</span>
+        </label>
+        <label class="inline-flex items-center ml-4">
+            <input type="radio" name="sexo" value="femenino" class="form-radio text-blue-500">
+            <span class="ml-2">Femenino</span>
+        </label>
+    </div>
+    <div class="text-center">
+        <button id="guardar-usuario" type="button"
+            class="bg-green-500 hover:bg-green-400 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+            Guardar
+        </button>
+    </div>
+</div>
+
+<div id="tarjeta-usuario" class="hidden bg-white shadow-lg rounded-lg overflow-hidden w-full max-w-sm mx-auto mt-8">
+    <div class="bg-gradient-to-r from-blue-500 to-blue-300 text-white p-4 text-center">
+        <h2 class="text-2xl font-bold" id="nombre-usuario"></h2>
+    </div>
+    <div class="flex justify-center -mt-12">
+        <img id="imagen-usuario" src="https://via.placeholder.com/96" alt="Imagen Usuario" class="rounded-full border-4 border-white w-24 h-24">
+    </div>
+    <div class="text-center mt-4">
+        <p class="text-gray-700">Instrumento: <span id="instrumento-usuario"></span></p>
+    </div>
+</div>
+
+<script>
+    document.getElementById("nuevo-usuario").addEventListener("click", function () {
+console.log("Botón 'Nuevo Usuario' clickeado");
+const tarjeta = document.getElementById("tarjeta-nuevo-usuario");
+tarjeta.classList.toggle("hidden");
+});
+
+document.getElementById("guardar-usuario").addEventListener("click", function () {
+console.log("Botón 'Guardar' clickeado");
+const nombre = document.getElementById("nombre").value;
+const instrumento = document.getElementById("instrumento").value;
+
+if (nombre && instrumento) {
+    document.getElementById("nombre-usuario").textContent = nombre;
+    document.getElementById("instrumento-usuario").textContent = instrumento;
+
+    document.getElementById("tarjeta-nuevo-usuario").classList.add("hidden");
+    document.getElementById("tarjeta-usuario").classList.remove("hidden");
+} else {
+    alert("Por favor completa todos los campos.");
+}
+});
+</script>
 </body>
 </html>

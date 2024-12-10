@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --primary-color: #e76e28;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+    <div class="min-h-screen bg-cover bg-center flex items-center justify-center bg-[url('https://img.freepik.com/vector-premium/fondo-planeta-alienigena-habitable-mundo-ficcion_316839-3158.jpg?w=1380')]">
+
+        <div class="min-h-screen flex items-center justify-center">
+            <div class="bg-white shadow-lg rounded-lg p-8 w-full max-w-md">
+                <h1 class="text-2xl font-bold text-center mb-6 text-[color:var(--primary-color)]">Iniciar Sesión</h1>
+                <form>
+                    <label class="block mb-2 text-gray-700">Nombre</label>
+                    <input type="text" placeholder="Ingresa tu nombre"
+                        class="w-full border border-gray-300 rounded px-3 py-2 focus:border-[color:var(--primary-color)] focus:outline-none">
+
+                    <label class="block mb-2 text-gray-700">Correo</label>
+                    <input type="email" placeholder="Ingresa tu correo"
+                        class="w-full border border-gray-300 rounded px-3 py-2 focus:border-[color:var(--primary-color)] focus:outline-none">
+
+                    <label class="block mt-4 mb-2 text-gray-700">Contraseña</label>
+                    <input type="password" placeholder="Ingresa tu contraseña"
+                        class="w-full border border-gray-300 rounded px-3 py-2 focus:border-[color:var(--primary-color)] focus:outline-none">
+
+                    <button type="submit"
+                        class="w-full bg-[color:var(--primary-color)] text-white py-2 rounded mt-4 hover:bg-purple-600 hover:text-gray-200">
+                        Entrar
+                    </button>
+                </form>
+                <button class="w-full bg-gray-200 text-[color:var(--primary-color)] mt-4 py-2 rounded hover:bg-gray-300"
+                    onclick="mostrarRegistro()">Nuevo Usuario</button>
+            </div>
+        </div>
+
+        <div id="modalRegistro" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+            <div class="bg-white shadow-lg rounded-lg p-6 w-full max-w-lg">
+                <h2 class="text-2xl font-bold mb-4 text-[color:var(--primary-color)]">Registro de Nuevo Usuario</h2>
+                <form>
+                    <label class="block mb-2">Nombre completo</label>
+                    <input type="text"
+                        class="w-full border border-gray-300 rounded px-3 py-2 focus:border-[color:var(--primary-color)] focus:outline-none">
+
+                    <label class="block mt-4 mb-2">Correo</label>
+                    <input type="email"
+                        class="w-full border border-gray-300 rounded px-3 py-2 focus:border-[color:var(--primary-color)] focus:outline-none">
+
+                    <label class="block mt-4 mb-2">Confirmar correo</label>
+                    <input type="email"
+                        class="w-full border border-gray-300 rounded px-3 py-2 focus:border-[color:var(--primary-color)] focus:outline-none">
+
+                    <label class="block mt-4 mb-2">Contraseña</label>
+                    <input type="password"
+                        class="w-full border border-gray-300 rounded px-3 py-2 focus:border-[color:var(--primary-color)] focus:outline-none">
+
+                    <label class="block mt-4 mb-2">Instrumento</label>
+                    <select
+                        class="w-full border border-gray-300 rounded px-3 py-2 focus:border-[color:var(--primary-color)] focus:outline-none">
+                        <option>Guitarra</option>
+                        <option>Piano</option>
+                        <option>Batería</option>
+                        <option>Violín</option>
+                    </select>
+
+                    <label class="block mt-4 mb-2">Fecha de nacimiento</label>
+                    <input type="date"
+                        class="w-full border border-gray-300 rounded px-3 py-2 focus:border-[color:var(--primary-color)] focus:outline-none">
+
+                    <label class="block mt-4 mb-2">Sube tu imagen</label>
+                    <input type="file"
+                        class="w-full border border-gray-300 rounded px-3 py-2 focus:border-[color:var(--primary-color)] focus:outline-none">
+
+                    <button type="submit"
+                        class="mt-6 w-full bg-[color:var(--primary-color)] text-white py-2 rounded hover:bg-purple-600">
+                        Registrar
+                    </button>
+                </form>
+                <button class="mt-4 w-full bg-gray-300 py-2 rounded text-[color:var(--primary-color)] hover:bg-gray-400"
+                    onclick="cerrarRegistro()">Cerrar</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function mostrarRegistro() {
+            document.getElementById('modalRegistro').classList.remove('hidden');
+        }
+        function cerrarRegistro() {
+            document.getElementById('modalRegistro').classList.add('hidden');
+        }
+    </script>
+</body>
+
+</html>
