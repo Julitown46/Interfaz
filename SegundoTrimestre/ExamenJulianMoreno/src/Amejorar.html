@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Examen Julian Moreno Cuenca</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link href="./output.css" rel="stylesheet">
+</head>
+
+<body class="bg-azulado text-white min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="bg-gradient-to-r from-azulado to-morado py-4 fixed w-full top-0">
+    <nav class="container mx-auto flex justify-between items-center">
+      <div class="logo">
+        <img src="./img/barco.jpg" alt="Logo" class="w-16 h-16 rounded-full transform hover:scale-110 transition">
+      </div>
+      <ul class="menu flex space-x-4">
+        <li><a href="./Amejorar.html" class="hover:text-azulado">Inicio</a></li>
+        <li><a href="./servicios.html" class="hover:text-azulado">Servicios</a></li>
+        <li><a href="./contacto.html" class="hover:text-azulado">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-1 pt-20">
+    <section class="hero bg-cover bg-center h-screen bg-[url('./img/fondo.jpg')]">
+      <div class="h-full flex flex-col justify-center items-center text-center">
+        <h1 class="bg-clip-text text-transparent bg-gradient-to-r from-azulado to-morado text-4xl font-bold mb-4">
+          Bienvenido a bordo</h1>
+        <p class="bg-clip-text text-transparent bg-gradient-to-r from-azulado to-morado text-xl mb-6">Subete a nuestro
+          barco</p>
+        <div class="cta-container">
+          <button class="bg-morado text-white px-6 py-3 rounded hover:bg-azulado transition">Más Información</button>
+        </div>
+        <br>
+        <div class="cta-container">
+          <input type="text" placeholder="Buscar..."
+            class="w-80 px-4 py-3 rounded-lg border-2 focus:outline-none focus:ring-2 focus:ring-morado focus:border-transparent" />
+          <button class="bg-morado text-white px-6 py-3 rounded hover:bg-azulado transition">Buscar</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-morado text-white py-4 text-center">
+    <ul class="footer-menu flex justify-center space-x-4">
+      <li><a href="#" class="hover:text-azulado">Política de Privacidad</a></li>
+      <li><a href="#" class="hover:text-azulado">Términos de Uso</a></li>
+    </ul>
+  </footer>
+
+</body>
+
+</html>

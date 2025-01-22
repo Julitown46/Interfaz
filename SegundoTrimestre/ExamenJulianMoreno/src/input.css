@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@Layer components {
+    .rectangulo {
+        @apply bg-azulado text-white p-6 rounded hover:bg-morado transition h-32 w-full flex items-center justify-center text-3xl;
+    }
+}
